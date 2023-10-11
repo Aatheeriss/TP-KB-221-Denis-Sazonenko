@@ -1,5 +1,5 @@
 try:
-    #insertion function which repeats until getting valid values of required functions
+    #insertion function which repeats until getting valid values for required functions
     def insertion():
         while True:
             try:
