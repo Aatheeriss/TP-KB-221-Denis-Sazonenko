@@ -34,8 +34,13 @@ try:
         a, b, action = insertion()
         calculation(a, b, action)
 
-    while True:     
-        main()
+    while True:
+        continue_check = (input('Do you want to continue?[Y/N]')).upper()
+        if continue_check == "Y":     
+            main()
+        else:
+            print('\n\nBye!')
+            break
 
 except KeyboardInterrupt:
     print('\n\nBye!')
