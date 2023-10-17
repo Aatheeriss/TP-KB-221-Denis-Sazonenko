@@ -11,6 +11,14 @@ list = [
     {"name":"Zak",  "phone":"0631234567", "mail":"zak@example.com", "age":"20"}
 ]
 
+#BUBBLE SORT IMPLEMENTED
+def sort(list):
+    n = len(list)
+    for i in range(n - 1):
+        for j in range(0, n - i - 1):
+            if list[j]["name"] > list[j + 1]["name"]:
+                list[j], list[j + 1] = list[j + 1], list[j]
+
 #SANITIZING
 def sanitizing(var):
     var = var.strip()
@@ -65,6 +73,7 @@ def updateElement():
     name = sanitizing(input("Please enter name to be updated: "))
     for student in list:
         if name == student["name"]:
+            student["name"] = sanitizing(input("Enter new student name: "))
             student["phone"] = input("Enter new student phone: ")
             student["mail"] = input("Enter new student mail: ")
             student["age"] = input("Enter new student age: ")
@@ -80,13 +89,16 @@ def main():
             case "C" | "c":
                 print("New element will be created:")
                 addNewElement()
+                sort(list)
                 printAllList()
             case "U" | "u":
                 print("Existing element will be updated")
                 updateElement()
+                sort(list)
             case "D" | "d":
                 print("Element will be deleted")
                 deleteElement()
+                sort(list)
             case "P" | "p":
                 print("List will be printed")
                 printAllList()
