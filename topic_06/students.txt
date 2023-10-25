@@ -1,0 +1,4 @@
+Denis,1
+Artem,12
+Mia,92
+Lia,65
