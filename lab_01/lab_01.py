@@ -77,6 +77,7 @@ def updateElement():
             student["phone"] = input("Enter new student phone: ")
             student["mail"] = input("Enter new student mail: ")
             student["age"] = input("Enter new student age: ")
+            sort(list)
             print("Student information has been updated!")
             print(f"Name: {student['name']}, Phone: {student['phone']}, Mail: {student['mail']}, Age: {student['age']}")
             return
@@ -89,16 +90,13 @@ def main():
             case "C" | "c":
                 print("New element will be created:")
                 addNewElement()
-                sort(list)
                 printAllList()
             case "U" | "u":
                 print("Existing element will be updated")
                 updateElement()
-                sort(list)
             case "D" | "d":
                 print("Element will be deleted")
                 deleteElement()
-                sort(list)
             case "P" | "p":
                 print("List will be printed")
                 printAllList()
