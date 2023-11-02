@@ -7,8 +7,8 @@ class Operations:
 
     def operationsInput():
         try:
-            a = float(input("Enter 1 number: \n"))
-            b = float(input("Enter 2 number: \n"))
+            a = float(input("Enter 1 number: "))
+            b = float(input("Enter 2 number: "))
         except ValueError:
             logging.error(ValueError, exc_info=True)
             print("Wrong number, try again!")
